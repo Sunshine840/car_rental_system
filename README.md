@@ -55,4 +55,8 @@ Admins can manage cars, bookings, and user data. Payments can be made partially 
 ## Database Design
 
 - The ERD diagram can be found here docs/ERD.pdf
-- The ERD diagram can be found here docs/UML_Class_Diagram.pdf
+
+## UML Diagrams
+
+- The UML Class diagram can be found here docs/UML_Class_Diagram.pdf
+- The UML Use Case diagram can be found here docs/UML_UseCase_Diagram.pdf
