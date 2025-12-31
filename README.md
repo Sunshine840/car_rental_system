@@ -60,3 +60,4 @@ Admins can manage cars, bookings, and user data. Payments can be made partially 
 
 - The UML Class diagram can be found here docs/UML_Class_Diagram.pdf
 - The UML Use Case diagram can be found here docs/UML_UseCase_Diagram.pdf
+- The UML Activity diagram can be found here docs/UML_Activity_Diagram.pdf
