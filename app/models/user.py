@@ -1,16 +1,33 @@
-# Here we are creating user class and relevant objects from it
+from enum import Enum
+
+
+class Role(Enum):  # Enums can be extended further
+    USER = "User"
+    ADMIN = "Admin"
+    SUPERADMIN = "SuperAdmin"
 
 
 class User:  # Parent class
-    def __init__(self, id, fname, lname, email_id, role):
+    def __init__(
+        self,
+        id,
+        fname,
+        lname,
+        email_id,
+        password,
+        phone_number,
+        created_at,
+        updated_at,
+        role: Role = Role.USER,
+        is_active=True,
+    ):
         self.id = id
         self.fname = fname
         self.lname = lname
         self.email_id = email_id
+        self.password = password
+        self.phone_number = phone_number
         self.role = role
-
-
-# fixed class for admin
-class Admin(User):
-    def __init__(self, id, fname, lname, email_id):
-        super().__init__(id, fname, lname, email_id, role="Admin")
+        self.created_at = created_at
+        self.updated_at = updated_at
+        self.is_active = is_active

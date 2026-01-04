@@ -1,14 +1,37 @@
-class payment:
+from enum import Enum
+
+
+class CurrencyType(Enum):
+    NZD = "Nzd"  # New Zealand dollars
+    USD = "Usd"  # United stateS
+    EUR = "Euro"  # European
+    GBP = "Gbp"  # Great Britain pound
+    INR = "INR"  # Indian rupee
+
+
+class PaymentStatus(Enum):
+    PENDING = "Pending"
+    SUCCESS = "Success"
+    FAILED = "Failed"
+
+
+class Payment:
     def __init__(
-        self, id, amount, status, order_id, user_id, payment_method, date, timestamp
+        self,
+        id,
+        transaction_id,
+        booking_id,
+        amount,
+        status: PaymentStatus,
+        payment_method,
+        timestamp,
+        currency: CurrencyType = CurrencyType.NZD,
     ):
         self.id = id
+        self.transaction_id = transaction_id
+        self.booking_id = booking_id
         self.amount = amount
         self.status = status
-        self.order_id = order_id
-        self.user_id = user_id
         self.payment_method = payment_method
-        self.date = date
+        self.currency = currency
         self.timestamp = timestamp
-        amount = 100
-        print(f"we have received a payment of amount {self.amount}")
